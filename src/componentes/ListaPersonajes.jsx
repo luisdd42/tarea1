@@ -6,7 +6,9 @@ export default function ListaPersonajes({ personajes }) {
       ) : (
         personajes.map((personaje) => (
           <div key={personaje.id} className="text-center p-4">
-            <h2 className="text-xl font-bold">{personaje.attributes.name}</h2>
+            <h2 className="text-lg font-semibold">
+              {personaje.attributes.name}
+            </h2>
             <img
               src={personaje.attributes.image}
               alt={personaje.attributes.name}

@@ -6,18 +6,21 @@ export default function FormularioBusqueda({ onBuscar }) {
   const manejarCambio = (e) => {
     const valor = e.target.value;
     setNombre(valor);
-    onBuscar(valor); // Llama a la función en tiempo real
+    onBuscar(valor.trim());
   };
 
   return (
-    <div className="text-center mt-4">
+    <div className="text-center">
       <input
         type="text"
         value={nombre}
         onChange={manejarCambio}
         placeholder="Ingresa un nombre"
-        className="border p-2 rounded"
+        className="border p-4 text-lg rounded bg-blue-300 text-black w-80 text-center"
       />
+      <button className="ml-2 p-4 text-lg bg-green-500 text-white rounded">
+        Buscar
+      </button>
     </div>
   );
 }
